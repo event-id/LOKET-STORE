@@ -139,187 +139,194 @@ td strong{overflow-wrap:anywhere}
 }
 @media(max-width:360px){.grid{grid-template-columns:minmax(0,1fr)}.login{padding:18px}.tabs button{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-
-/* ===== LOKET STORE · Luxury Emerald UI (visual-only layer) ===== */
+/* ===== LOKET STORE · SIGNATURE LUXURY REDESIGN ===== */
 :root{
-  --bg:#060b16;
-  --text:#f4f7ff;
-  --muted:#a9b7ce;
-  --line:rgba(139,163,198,.22);
-  --accent:#16d6b5;
-  --accent-hover:#42e7ca;
-  --accent-ink:#04241f;
-  --shadow:0 24px 70px rgba(0,0,0,.34);
-  --radius:22px;
+  --bg:#050914;--text:#f5f8ff;--muted:#a9b8d0;--line:rgba(130,157,195,.24);
+  --accent:#00dfbd;--accent-hover:#42f2d4;--accent-ink:#03251f;
+  --shadow:0 30px 90px rgba(0,0,0,.48);--radius:24px;
 }
+html{min-height:100%;background:#050914}
 body{
+  min-height:100vh;
   background:
-    radial-gradient(ellipse at 8% 8%,rgba(16,210,180,.13),transparent 30%),
-    radial-gradient(ellipse at 92% 12%,rgba(71,111,190,.16),transparent 34%),
-    radial-gradient(ellipse at 50% 100%,rgba(13,95,105,.10),transparent 42%),
-    #060b16;
+    radial-gradient(ellipse 75% 48% at 50% -8%,rgba(0,219,186,.19),transparent 72%),
+    radial-gradient(ellipse 45% 45% at 100% 55%,rgba(41,91,165,.17),transparent 75%),
+    radial-gradient(ellipse 40% 40% at 0% 85%,rgba(0,139,128,.13),transparent 75%),
+    linear-gradient(145deg,#050914 0%,#091426 48%,#050b17 100%);
   background-attachment:fixed;
 }
 body::before{
-  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  opacity:.16;
-  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:42px 42px;
-  mask-image:linear-gradient(to bottom,black,transparent 82%);
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;
+  background-image:linear-gradient(rgba(160,190,220,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(160,190,220,.055) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 88%);
 }
-.wrap{padding-top:clamp(20px,4vw,42px);padding-bottom:40px}
+.wrap{width:min(1460px,100%);padding:clamp(18px,4vw,44px) clamp(13px,3vw,38px)}
 .card{
-  background:linear-gradient(145deg,rgba(19,34,57,.94),rgba(9,19,35,.97));
-  border:1px solid rgba(107,154,174,.23);
-  border-radius:22px;
-  box-shadow:0 20px 55px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.035);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  background:linear-gradient(145deg,rgba(19,35,59,.94),rgba(8,18,34,.97));
+  border:1px solid rgba(133,165,202,.2);border-radius:24px;
+  box-shadow:0 22px 65px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
 }
 .login{
   position:relative;isolation:isolate;overflow:hidden;
-  max-width:500px;margin:clamp(38px,9vh,100px) auto;
-  padding:clamp(25px,5.5vw,42px);
-  border:1px solid rgba(22,214,181,.32);
-  border-radius:28px;
-  background:linear-gradient(150deg,rgba(18,34,58,.98),rgba(8,19,36,.985) 72%);
-  box-shadow:0 28px 90px rgba(0,0,0,.48),0 0 0 1px rgba(22,214,181,.045),0 0 55px rgba(22,214,181,.075);
+  width:min(100%,540px);max-width:540px;
+  margin:clamp(28px,7vh,76px) auto;
+  padding:clamp(27px,5.4vw,46px);
+  border:1px solid rgba(0,223,189,.38);border-radius:30px;
+  background:linear-gradient(150deg,rgba(17,34,59,.985) 0%,rgba(8,20,38,.985) 68%,rgba(7,19,34,.99) 100%);
+  box-shadow:0 34px 100px rgba(0,0,0,.55),0 0 0 1px rgba(0,223,189,.07),0 0 75px rgba(0,223,189,.105),inset 0 1px 0 rgba(255,255,255,.07);
 }
 .login::before{
   content:"";position:absolute;z-index:-1;pointer-events:none;
-  width:250px;height:250px;right:-120px;top:-145px;border-radius:50%;
-  background:rgba(22,214,181,.12);filter:blur(18px);
+  width:360px;height:360px;right:-190px;top:-225px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,223,189,.23),rgba(0,223,189,0) 68%);filter:blur(8px);
 }
 .login::after{
   content:"";position:absolute;z-index:-1;pointer-events:none;
-  width:180px;height:180px;left:-125px;bottom:-125px;border-radius:50%;
-  background:rgba(67,111,190,.13);filter:blur(18px);
+  width:300px;height:300px;left:-190px;bottom:-220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(55,105,190,.22),rgba(55,105,190,0) 70%);filter:blur(8px);
 }
-.brand{
-  font-size:clamp(24px,2.5vw,30px);
-  font-weight:900;letter-spacing:-1.1px;
+.login .brand{font-size:clamp(27px,5vw,34px);font-weight:900;letter-spacing:-1.5px;line-height:1.15}
+.login .brand::before{
+  content:"✦  SECURE ADMIN PORTAL";display:block;margin-bottom:17px;
+  color:#78e9d7;font-size:10px;font-weight:850;letter-spacing:2.5px;
 }
-.brand span{
-  color:var(--accent);
-  text-shadow:0 0 25px rgba(22,214,181,.24);
+.brand span{color:#00dfbd;text-shadow:0 0 24px rgba(0,223,189,.34)}
+.login h1{margin:23px 0 10px;font-size:clamp(29px,5.4vw,39px);line-height:1.12;letter-spacing:-1.5px;font-weight:850}
+.login>p.muted{max-width:40ch;margin:0;color:#a9bad3;font-size:15px;line-height:1.85}
+.login form{margin-top:30px}
+.login label{color:#d1dced;font-size:13px;font-weight:750;letter-spacing:.025em;margin-bottom:9px}
+.login .field{margin-bottom:21px}
+.login input{
+  min-height:60px;padding:15px 17px;border-radius:15px;
+  border:1px solid rgba(128,158,197,.3);background:rgba(4,13,27,.78);
+  color:#f5f8ff;box-shadow:inset 0 2px 8px rgba(0,0,0,.18);
 }
-.login .brand{font-size:clamp(25px,5vw,31px)}
-.login h1{
-  margin:20px 0 9px;font-size:clamp(27px,5vw,36px);
-  letter-spacing:-1.15px;line-height:1.16;
-}
-.login>p.muted{font-size:15px;line-height:1.8;max-width:42ch}
-.login form{margin-top:28px}
-label{font-size:13px;letter-spacing:.01em;color:#c1cde0}
-.field{margin-bottom:18px}
-input,textarea,select{
-  min-height:48px;padding:13px 15px;border-radius:13px;
-  border:1px solid rgba(112,143,184,.28);
-  background:rgba(5,15,30,.78);
-  box-shadow:inset 0 1px 2px rgba(0,0,0,.12);
-}
-textarea{min-height:100px}
-input:hover,textarea:hover,select:hover{border-color:rgba(22,214,181,.48)}
-input:focus,textarea:focus,select:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 4px rgba(22,214,181,.105),0 0 22px rgba(22,214,181,.07);
-}
-.login input{min-height:56px;border-radius:15px}
-button{
-  min-height:42px;border-radius:12px;
-  background:linear-gradient(135deg,#18d9b7,#08bfa5);
-  box-shadow:0 8px 22px rgba(12,199,169,.17),inset 0 1px 0 rgba(255,255,255,.2);
-}
+.login input:hover{border-color:rgba(0,223,189,.52)}
+.login input:focus{outline:none;border-color:#00dfbd;box-shadow:0 0 0 4px rgba(0,223,189,.12),0 0 26px rgba(0,223,189,.11)}
 .login form button{
-  min-height:54px;margin-top:3px;border-radius:14px;
-  font-size:15px;font-weight:850;letter-spacing:.01em;
-  box-shadow:0 12px 28px rgba(12,199,169,.20),inset 0 1px 0 rgba(255,255,255,.22);
+  width:100%;min-height:60px;margin-top:3px;border:1px solid rgba(119,255,229,.34);border-radius:15px;
+  background:linear-gradient(115deg,#00c9a9 0%,#00e0bd 52%,#12c9ad 100%);
+  color:#03251f;font-size:16px;font-weight:900;letter-spacing:.01em;
+  box-shadow:0 13px 32px rgba(0,213,181,.24),inset 0 1px 0 rgba(255,255,255,.34);
+  transition:transform .2s ease,filter .2s ease,box-shadow .2s ease;
 }
-button:hover:not(:disabled){
-  background:linear-gradient(135deg,#4be9ce,#12c9ad);
-  box-shadow:0 11px 28px rgba(12,199,169,.25),inset 0 1px 0 rgba(255,255,255,.22);
-}
-button.secondary{
-  background:linear-gradient(145deg,#243957,#1a2b45);
-  border-color:rgba(132,160,199,.22);
-}
-button.danger{background:linear-gradient(145deg,#54283b,#3d2030)}
-button.good{background:linear-gradient(145deg,#176c5e,#125448)}
-.top{
-  padding:16px 19px;margin-bottom:22px;border:1px solid rgba(112,143,184,.16);
-  border-radius:18px;background:rgba(13,25,44,.72);
-  box-shadow:0 12px 34px rgba(0,0,0,.16);
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-}
-.top .brand{font-size:clamp(23px,2.3vw,29px)}
-.top .muted{font-size:13px}
-.stat{
-  min-height:132px;padding:21px;border-radius:18px;
-  background:linear-gradient(145deg,rgba(24,43,70,.96),rgba(13,27,48,.98));
-  border:1px solid rgba(117,151,192,.22);
-  box-shadow:0 12px 28px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.035);
-  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
-}
-.stat:hover{transform:translateY(-3px);border-color:rgba(22,214,181,.36);box-shadow:0 17px 34px rgba(0,0,0,.2)}
-.stat span{color:#b7c6dc}
-.stat strong{font-size:clamp(28px,3vw,36px);color:#f5fffd}
-.tabs{
-  padding:6px;border-radius:15px;border-color:rgba(117,151,192,.2);
-  background:rgba(9,19,34,.86);box-shadow:0 8px 22px rgba(0,0,0,.12);
-}
-.tabs button{border-radius:10px}
-.tabs button.active{background:linear-gradient(135deg,#18d9b7,#08bfa5);box-shadow:0 5px 17px rgba(18,201,173,.2)}
-.section.active{animation:sectionIn .25s ease both}
-.section>.two>.card{border-color:rgba(117,151,192,.2)}
-.card h2{font-size:19px;color:#f2f7ff}
-.notice{
-  border-color:rgba(22,214,181,.22);
-  background:linear-gradient(120deg,rgba(19,57,65,.78),rgba(22,39,65,.88));
-  border-radius:15px;
-}
-.tablewrap{border-color:rgba(117,151,192,.2);border-radius:14px}
-table{border-spacing:0}
-th{background:rgba(5,14,27,.78);color:#aebdd3}
-td{border-bottom-color:rgba(117,151,192,.13)}
-tbody tr:hover{background:rgba(22,214,181,.035)}
-.pill{border:1px solid rgba(142,166,200,.12);background:#263b59}
-.pill.ok{background:rgba(18,112,91,.28);border-color:rgba(50,197,158,.2);color:#aaffdf}
-.pill.off{background:rgba(112,42,65,.3);border-color:rgba(230,105,139,.18);color:#ffc0d0}
-.message{border-radius:13px}
-.preview{border-radius:13px;border-color:rgba(117,151,192,.24)}
-.foot{padding:30px 10px;color:#8192ad}
-:focus-visible{outline-offset:3px}
+.login form button:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 18px 38px rgba(0,213,181,.32),inset 0 1px 0 rgba(255,255,255,.38)}
+.login form button:active:not(:disabled){transform:translateY(0)}
+.login>p:last-child{margin-top:23px!important;padding:15px 16px;border:1px solid rgba(132,160,198,.14);border-radius:13px;background:rgba(4,13,27,.34);font-size:11px!important;line-height:1.75;color:#91a5c2}
+button{border-radius:12px;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid rgba(0,223,189,.42);outline-offset:3px}
+input,textarea,select{border-radius:12px;background:#081528;border-color:rgba(128,158,197,.25)}
+.top{padding:17px 20px;border:1px solid rgba(128,158,197,.18);border-radius:18px;background:rgba(12,25,44,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.stat{border-radius:18px;background:linear-gradient(145deg,#182e4b,#0e1d33);border-color:rgba(128,158,197,.23);box-shadow:0 14px 30px rgba(0,0,0,.17)}
+.stat strong{color:#f4fffd}.stat:after{background:rgba(0,223,189,.1)}
+.tabs{border-radius:15px;background:rgba(5,14,27,.78);border-color:rgba(128,158,197,.2)}
+.tabs button.active{background:linear-gradient(115deg,#00c9a9,#00e0bd);box-shadow:0 7px 20px rgba(0,213,181,.2)}
+.notice{border-color:rgba(0,223,189,.22);background:linear-gradient(120deg,rgba(13,62,61,.78),rgba(20,39,66,.9));border-radius:15px}
+.tablewrap{border-color:rgba(128,158,197,.2);border-radius:14px}th{background:rgba(4,13,26,.8)}
+.pill.ok{background:#124b43;color:#a6ffeb}.foot{color:#8497b4}
 @media(max-width:560px){
-  .wrap{padding:12px 13px 28px}
-  .login{margin:6vh auto;padding:25px 21px;border-radius:23px}
-  .login h1{margin-top:17px}
-  .login>p.muted{font-size:14px}
+  .wrap{padding:14px 13px 28px}
+  .login{margin:5.5vh auto;padding:28px 22px 24px;border-radius:25px}
+  .login .brand::before{font-size:9px;letter-spacing:2px;margin-bottom:15px}
+  .login h1{margin-top:21px;font-size:31px}
+  .login>p.muted{font-size:14px;line-height:1.8}
+  .login input{min-height:58px}
+  .login form button{min-height:58px}
   .top{padding:15px;border-radius:15px}
-  .card{border-radius:17px}
-  .stat{min-height:108px;padding:15px;border-radius:14px}
-  .tabs{border-radius:13px}
 }
-@media(prefers-reduced-motion:reduce){
-  .stat{transition:none}
-  .stat:hover{transform:none}
-}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
 
+
+/* ===== LOGIN LANDING PAGE: LOKET STORE ===== */
+:root{color-scheme:light}
+body{background:#f5f8ff;color:#10265b;background-image:none}
+body::before{display:none}
+.wrap{width:100%;max-width:none;padding:0}
+.login-screen{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);background:#fff;overflow:hidden;border:0;border-radius:0;margin:0;padding:0;box-shadow:none}
+.login-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:100vh;padding:clamp(28px,4vw,64px);color:#fff;background:linear-gradient(135deg,#073caa 0%,#0759df 48%,#087ef4 100%)}
+.login-hero:before,.login-hero:after{content:"";position:absolute;z-index:-1;border-radius:50%;pointer-events:none}
+.login-hero:before{width:650px;height:650px;right:-230px;top:-280px;background:radial-gradient(circle,rgba(110,190,255,.55),transparent 68%)}
+.login-hero:after{width:750px;height:750px;left:-330px;bottom:-440px;background:radial-gradient(circle,rgba(0,28,128,.5),transparent 70%)}
+.hero-brand{display:flex;align-items:center;gap:14px;font-size:clamp(24px,2.5vw,36px);font-weight:950;letter-spacing:-1.5px;line-height:1.05}
+.hero-brand b,.login-logo b{color:#ffbf19}
+.hero-brand small{display:block;font-size:12px;font-weight:550;letter-spacing:0;margin-top:8px;color:#d8e9ff}
+.logo-mark{display:grid;place-items:center;width:53px;height:53px;border-radius:16px;background:linear-gradient(145deg,#fff,#d8eaff);color:#0872ed;font-size:35px;font-weight:950;box-shadow:0 8px 22px #002c8050}
+.hero-copy{margin-top:clamp(48px,8vh,100px);max-width:660px}
+.eyebrow{font-size:11px;font-weight:850;letter-spacing:2.7px;color:#a9d9ff}
+.hero-copy h2{font-size:clamp(32px,4vw,58px);line-height:1.12;letter-spacing:-2px;margin:16px 0;font-weight:900}
+.hero-copy h2 em{font-style:normal;color:#ffbf19}
+.hero-copy p{font-size:clamp(16px,1.5vw,22px);color:#dcecff;margin:0}
+.hero-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin-top:38px;max-width:530px}
+.hero-features>div{display:flex;align-items:center;gap:12px}
+.hero-features i{font-style:normal;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#ffffff20;border:1px solid #ffffff32;font-size:22px;font-weight:900}
+.hero-features b,.hero-features small{display:block}.hero-features b{font-size:14px}.hero-features small{font-size:12px;color:#c9e3ff}
+.hero-dashboard{width:min(100%,590px);margin:38px auto 20px;transform:perspective(1100px) rotateY(-7deg) rotateX(2deg);border:7px solid #d8e8ff;border-radius:18px;background:#f5f8ff;box-shadow:0 28px 65px #001b6a65;overflow:hidden}
+.mock-top{height:34px;background:#eaf1ff;display:flex;align-items:center;gap:5px;padding:0 12px;color:#23467e;font-size:8px}
+.mock-top>span{width:6px;height:6px;border-radius:50%;background:#9eb8e8}.mock-top b{margin-left:10px;font-size:8px}
+.mock-content{display:flex;min-height:175px}.mock-content aside{width:65px;background:#092c78;display:flex;flex-direction:column;gap:13px;padding:15px 10px;color:#8ecaff}.mock-content aside strong{font-size:15px}.mock-content aside span{height:5px;border-radius:4px;background:#ffffff30}
+.mock-main{flex:1;padding:13px}.mock-main h4{margin:0 0 10px;color:#102d6a;font-size:13px}.mock-stats{display:flex;gap:8px}.mock-stats i{height:35px;flex:1;border-radius:5px;background:linear-gradient(120deg,#1684ff,#5bb5ff)}.mock-stats i:nth-child(2){background:linear-gradient(120deg,#09b981,#6ce6ba)}.mock-stats i:nth-child(3){background:linear-gradient(120deg,#ff9a0b,#ffd27a)}
+.mock-chart{height:68px;margin-top:10px;display:flex;align-items:end;gap:12px;border-bottom:1px solid #d9e5f8;background:repeating-linear-gradient(to bottom,transparent 0 21px,#e6eefb 22px)}
+.mock-chart span{flex:1;border-radius:4px 4px 0 0;background:#65a9ff;height:35%}.mock-chart span:nth-child(2){height:70%}.mock-chart span:nth-child(3){height:50%}.mock-chart span:nth-child(4){height:85%}.mock-chart span:nth-child(5){height:60%}.mock-chart span:nth-child(6){height:95%}
+.mock-lines{display:flex;gap:8px;margin-top:10px}.mock-lines span{height:6px;background:#d8e5f8;border-radius:5px;flex:1}
+.hero-tag{display:flex;align-items:center;gap:12px;padding:13px 18px;background:#ffbf19;color:#09265f;border-radius:15px;width:fit-content;box-shadow:0 10px 25px #001b5b40}.hero-tag b,.hero-tag small{display:block}.hero-tag small{font-size:12px}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:auto;padding-top:30px;font-size:12px;color:#d9eaff}
+.login-panel{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:clamp(25px,5vw,75px);background:linear-gradient(150deg,#fff,#f5f8ff)}
+.login-box{width:min(100%,440px)}
+.login-logo{display:flex;align-items:center;justify-content:center;gap:12px;font-size:27px;font-weight:950;letter-spacing:-1px;color:#0c2864;margin-bottom:30px}.login-logo .logo-mark{width:46px;height:46px;font-size:30px;border-radius:13px}.login-logo b{color:#0873ed}
+.login-box h1{text-align:center;color:#10265b;font-size:clamp(29px,3vw,39px);font-weight:900;letter-spacing:-1.2px;margin:0 0 8px}
+.login-sub{text-align:center;color:#64769a;margin:0 0 32px;font-size:14px;line-height:1.7}
+.login .field{margin-bottom:20px}.login label{color:#31466e;font-size:11px;letter-spacing:1px;font-weight:850;margin-bottom:8px}
+.input-icon{position:relative}.input-icon>span{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#6d83ad;font-size:18px;z-index:1}
+.login input{height:57px;padding:13px 15px 13px 46px;border-radius:12px;background:#fff;border:1px solid #d5e0f4;color:#12285b;box-shadow:0 4px 14px #173b7908}
+.login input::placeholder{color:#9aa9c5}.login input:focus{border-color:#1479f5;box-shadow:0 0 0 4px #1479f51a}
+.login form button{width:100%;height:58px;display:flex;align-items:center;justify-content:center;gap:14px;margin-top:8px;border-radius:12px;background:linear-gradient(110deg,#087cf4,#0645e9);color:white;font-weight:850;font-size:16px;box-shadow:0 12px 25px #0758e52c;border:0}
+.login form button b{font-size:22px}.login form button:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.login-security{text-align:center;margin-top:22px;color:#8291ad;font-size:12px}.login-security span{color:#10a779;font-size:17px;margin-right:5px}
+.login-footer{margin-top:auto;padding-top:42px;color:#93a0ba;font-size:11px;text-align:center}
+#loginMsg{margin:0 0 12px}
+@media(max-width:980px){.login-screen{grid-template-columns:1fr}.login-hero{min-height:auto;padding:30px 26px 25px}.hero-copy{margin-top:40px}.hero-dashboard{max-width:500px;margin:28px auto 10px}.hero-trust{margin-top:20px}.login-panel{padding:45px 24px 25px}.login-footer{padding-top:35px}}
+@media(max-width:560px){.login-hero{padding:24px 20px}.hero-brand{font-size:23px}.hero-copy{margin-top:35px}.hero-copy h2{font-size:34px;letter-spacing:-1.3px}.hero-features{gap:14px;margin-top:26px}.hero-features i{width:36px;height:36px}.hero-features b{font-size:12px}.hero-features small{font-size:10px}.hero-dashboard{margin:24px auto 10px;border-width:4px}.mock-content{min-height:130px}.hero-trust{font-size:10px;gap:10px}.login-panel{padding:35px 20px 20px}.login-logo{margin-bottom:22px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <section id="loginView" class="card login">
-    <div class="brand">LOKET <span>STORE</span></div>
-    <h1>Admin Dashboard</h1>
-    <p class="muted">Masuk menggunakan akun admin yang sudah didaftarkan di Supabase.</p>
-    <div id="loginMsg" class="message"></div>
-    <form id="loginForm">
-      <div class="field"><label for="email">Email admin</label><input id="email" type="email" autocomplete="username" required></div>
-      <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
-      <button type="submit" style="width:100%">Masuk ke Dashboard</button>
-    </form>
-    <p class="muted" style="font-size:12px;margin-bottom:0">Gunakan hanya URL project dan publishable/anon key Supabase. Jangan pernah memasukkan service_role key di halaman ini.</p>
+  <section id="loginView" class="login-screen">
+    <div class="login-hero">
+      <div class="hero-brand"><span class="logo-mark">✓</span><span>LOKET <b>STORE</b></span><small>Solusi Lengkap Pendaftaran Online</small></div>
+      <div class="hero-copy">
+        <span class="eyebrow">PLATFORM EVENT MANAGEMENT</span>
+        <h2>Daftar, Kelola, &amp; Pantau<br>Semua Pendaftaran<br><em>Dalam Satu Platform</em></h2>
+        <p>Lebih mudah, lebih cepat, lebih profesional.</p>
+      </div>
+      <div class="hero-features">
+        <div><i>↯</i><span><b>Proses Cepat</b><small>&amp; Aman</small></span></div>
+        <div><i>✓</i><span><b>Data Terlindungi</b><small>Dengan keamanan tinggi</small></span></div>
+        <div><i>▣</i><span><b>Akses Mudah</b><small>Di semua perangkat</small></span></div>
+        <div><i>◉</i><span><b>Dukungan Profesional</b><small>Siap membantu</small></span></div>
+      </div>
+      <div class="hero-dashboard" aria-hidden="true">
+        <div class="mock-top"><span></span><span></span><span></span><b>LOKET STORE · ADMIN</b></div>
+        <div class="mock-content"><aside><strong>▰</strong><span></span><span></span><span></span><span></span></aside><div class="mock-main"><h4>Dashboard</h4><div class="mock-stats"><i></i><i></i><i></i></div><div class="mock-chart"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="mock-lines"><span></span><span></span><span></span></div></div></div>
+      </div>
+      <div class="hero-tag">🚀 <span><b>Bersama LOKET STORE</b><small>Wujudkan layanan digital terbaik!</small></span></div>
+      <div class="hero-trust"><span>✓ Aman &amp; terpercaya</span><span>◈ Pengelolaan praktis</span><span>◎ Profesional</span></div>
+    </div>
+    <div class="login-panel">
+      <div class="login-box">
+        <div class="login-logo"><span class="logo-mark">✓</span><strong>LOKET <b>STORE</b></strong></div>
+        <h1>Selamat Datang!</h1>
+        <p class="login-sub">Silakan masuk ke akun admin Anda untuk melanjutkan.</p>
+        <div id="loginMsg" class="message"></div>
+        <form id="loginForm">
+          <div class="field"><label for="email">EMAIL ADMIN</label><div class="input-icon"><span>✉</span><input id="email" type="email" autocomplete="username" placeholder="admin@loketstore.id" required></div></div>
+          <div class="field"><label for="password">PASSWORD</label><div class="input-icon"><span>▣</span><input id="password" type="password" autocomplete="current-password" placeholder="Masukkan password Anda" required></div></div>
+          <button type="submit"><span>Masuk Sekarang</span><b>→</b></button>
+        </form>
+        <div class="login-security"><span>♧</span> Login aman · Data Anda terlindungi</div>
+      </div>
+      <footer class="login-footer">© 2026 LOKET STORE. Semua hak dilindungi.</footer>
+    </div>
   </section>
 
   <main id="appView" class="hidden">
@@ -633,7 +640,105 @@ function printTicket(t){
   const rawCode=String(t.code), code=escapeHTML(rawCode), qrCode=JSON.stringify(rawCode).replace(/</g,'\\u003c'), name=escapeHTML(t.name||'Pemegang tiket'), ev=escapeHTML(t.event||''), email=escapeHTML(t.email||'');
   const w=window.open('','_blank','width=640,height=760');
   if(!w){ message($('#globalMsg'),'Izinkan pop-up untuk mencetak tiket.','error'); return; }
-  w.document.write(`<!doctype html><html><head><title>E-ticket ${code}</title><style>body{font:16px Arial;padding:32px;color:#111}.ticket{border:2px dashed #333;border-radius:14px;padding:24px;max-width:440px}h1{margin-top:0}code{font-size:22px;word-break:break-all}#qr img,#qr canvas{margin-top:10px}@media print{button{display:none}}</style></head><body><div class="ticket"><h1>LOKET STORE</h1><p>E-TICKET</p>${ev?`<p>Event: ${ev}</p>`:''}<p>Nama: ${name}</p>${email?`<p>Email: ${email}</p>`:''}<p>Kode tiket:</p><code>${code}</code><div id="qr"></div><p>Simpan kode ini dan tunjukkan saat masuk. QR hanya memuat kode tiket — validasi akhir dilakukan panitia melalui pencocokan kode di database.</p></div><button onclick="window.print()">Cetak</button><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"><\/script><script>try{new QRCode(document.getElementById("qr"),{text:${qrCode},width:170,height:170,correctLevel:QRCode.CorrectLevel.M});}catch(e){}<\/script></body></html>`);
+  w.document.write(`<!doctype html><html><head><title>E-ticket ${code}</title><style>body{font:16px Arial;padding:32px;color:#111}.ticket{border:2px dashed #333;border-radius:14px;padding:24px;max-width:440px}h1{margin-top:0}code{font-size:22px;word-break:break-all}#qr img,#qr canvas{margin-top:10px}@media print{button{display:none}}/* ===== LOKET STORE · SIGNATURE LUXURY REDESIGN ===== */
+:root{
+  --bg:#050914;--text:#f5f8ff;--muted:#a9b8d0;--line:rgba(130,157,195,.24);
+  --accent:#00dfbd;--accent-hover:#42f2d4;--accent-ink:#03251f;
+  --shadow:0 30px 90px rgba(0,0,0,.48);--radius:24px;
+}
+html{min-height:100%;background:#050914}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse 75% 48% at 50% -8%,rgba(0,219,186,.19),transparent 72%),
+    radial-gradient(ellipse 45% 45% at 100% 55%,rgba(41,91,165,.17),transparent 75%),
+    radial-gradient(ellipse 40% 40% at 0% 85%,rgba(0,139,128,.13),transparent 75%),
+    linear-gradient(145deg,#050914 0%,#091426 48%,#050b17 100%);
+  background-attachment:fixed;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;
+  background-image:linear-gradient(rgba(160,190,220,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(160,190,220,.055) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 88%);
+}
+.wrap{width:min(1460px,100%);padding:clamp(18px,4vw,44px) clamp(13px,3vw,38px)}
+.card{
+  background:linear-gradient(145deg,rgba(19,35,59,.94),rgba(8,18,34,.97));
+  border:1px solid rgba(133,165,202,.2);border-radius:24px;
+  box-shadow:0 22px 65px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+}
+.login{
+  position:relative;isolation:isolate;overflow:hidden;
+  width:min(100%,540px);max-width:540px;
+  margin:clamp(28px,7vh,76px) auto;
+  padding:clamp(27px,5.4vw,46px);
+  border:1px solid rgba(0,223,189,.38);border-radius:30px;
+  background:linear-gradient(150deg,rgba(17,34,59,.985) 0%,rgba(8,20,38,.985) 68%,rgba(7,19,34,.99) 100%);
+  box-shadow:0 34px 100px rgba(0,0,0,.55),0 0 0 1px rgba(0,223,189,.07),0 0 75px rgba(0,223,189,.105),inset 0 1px 0 rgba(255,255,255,.07);
+}
+.login::before{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  width:360px;height:360px;right:-190px;top:-225px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,223,189,.23),rgba(0,223,189,0) 68%);filter:blur(8px);
+}
+.login::after{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  width:300px;height:300px;left:-190px;bottom:-220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(55,105,190,.22),rgba(55,105,190,0) 70%);filter:blur(8px);
+}
+.login .brand{font-size:clamp(27px,5vw,34px);font-weight:900;letter-spacing:-1.5px;line-height:1.15}
+.login .brand::before{
+  content:"✦  SECURE ADMIN PORTAL";display:block;margin-bottom:17px;
+  color:#78e9d7;font-size:10px;font-weight:850;letter-spacing:2.5px;
+}
+.brand span{color:#00dfbd;text-shadow:0 0 24px rgba(0,223,189,.34)}
+.login h1{margin:23px 0 10px;font-size:clamp(29px,5.4vw,39px);line-height:1.12;letter-spacing:-1.5px;font-weight:850}
+.login>p.muted{max-width:40ch;margin:0;color:#a9bad3;font-size:15px;line-height:1.85}
+.login form{margin-top:30px}
+.login label{color:#d1dced;font-size:13px;font-weight:750;letter-spacing:.025em;margin-bottom:9px}
+.login .field{margin-bottom:21px}
+.login input{
+  min-height:60px;padding:15px 17px;border-radius:15px;
+  border:1px solid rgba(128,158,197,.3);background:rgba(4,13,27,.78);
+  color:#f5f8ff;box-shadow:inset 0 2px 8px rgba(0,0,0,.18);
+}
+.login input:hover{border-color:rgba(0,223,189,.52)}
+.login input:focus{outline:none;border-color:#00dfbd;box-shadow:0 0 0 4px rgba(0,223,189,.12),0 0 26px rgba(0,223,189,.11)}
+.login form button{
+  width:100%;min-height:60px;margin-top:3px;border:1px solid rgba(119,255,229,.34);border-radius:15px;
+  background:linear-gradient(115deg,#00c9a9 0%,#00e0bd 52%,#12c9ad 100%);
+  color:#03251f;font-size:16px;font-weight:900;letter-spacing:.01em;
+  box-shadow:0 13px 32px rgba(0,213,181,.24),inset 0 1px 0 rgba(255,255,255,.34);
+  transition:transform .2s ease,filter .2s ease,box-shadow .2s ease;
+}
+.login form button:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 18px 38px rgba(0,213,181,.32),inset 0 1px 0 rgba(255,255,255,.38)}
+.login form button:active:not(:disabled){transform:translateY(0)}
+.login>p:last-child{margin-top:23px!important;padding:15px 16px;border:1px solid rgba(132,160,198,.14);border-radius:13px;background:rgba(4,13,27,.34);font-size:11px!important;line-height:1.75;color:#91a5c2}
+button{border-radius:12px;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid rgba(0,223,189,.42);outline-offset:3px}
+input,textarea,select{border-radius:12px;background:#081528;border-color:rgba(128,158,197,.25)}
+.top{padding:17px 20px;border:1px solid rgba(128,158,197,.18);border-radius:18px;background:rgba(12,25,44,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.stat{border-radius:18px;background:linear-gradient(145deg,#182e4b,#0e1d33);border-color:rgba(128,158,197,.23);box-shadow:0 14px 30px rgba(0,0,0,.17)}
+.stat strong{color:#f4fffd}.stat:after{background:rgba(0,223,189,.1)}
+.tabs{border-radius:15px;background:rgba(5,14,27,.78);border-color:rgba(128,158,197,.2)}
+.tabs button.active{background:linear-gradient(115deg,#00c9a9,#00e0bd);box-shadow:0 7px 20px rgba(0,213,181,.2)}
+.notice{border-color:rgba(0,223,189,.22);background:linear-gradient(120deg,rgba(13,62,61,.78),rgba(20,39,66,.9));border-radius:15px}
+.tablewrap{border-color:rgba(128,158,197,.2);border-radius:14px}th{background:rgba(4,13,26,.8)}
+.pill.ok{background:#124b43;color:#a6ffeb}.foot{color:#8497b4}
+@media(max-width:560px){
+  .wrap{padding:14px 13px 28px}
+  .login{margin:5.5vh auto;padding:28px 22px 24px;border-radius:25px}
+  .login .brand::before{font-size:9px;letter-spacing:2px;margin-bottom:15px}
+  .login h1{margin-top:21px;font-size:31px}
+  .login>p.muted{font-size:14px;line-height:1.8}
+  .login input{min-height:58px}
+  .login form button{min-height:58px}
+  .top{padding:15px;border-radius:15px}
+}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+
+</style></head><body><div class="ticket"><h1>LOKET STORE</h1><p>E-TICKET</p>${ev?`<p>Event: ${ev}</p>`:''}<p>Nama: ${name}</p>${email?`<p>Email: ${email}</p>`:''}<p>Kode tiket:</p><code>${code}</code><div id="qr"></div><p>Simpan kode ini dan tunjukkan saat masuk. QR hanya memuat kode tiket — validasi akhir dilakukan panitia melalui pencocokan kode di database.</p></div><button onclick="window.print()">Cetak</button><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"><\/script><script>try{new QRCode(document.getElementById("qr"),{text:${qrCode},width:170,height:170,correctLevel:QRCode.CorrectLevel.M});}catch(e){}<\/script></body></html>`);
   w.document.close();
 }
 
